@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: aquamarine;
+    padding: 5px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #407090;
+    text-align: center;
+    height: 150px;
+}
+
+header h1 {
+    color: aliceblue;
+}
+
+section {
+    padding: 50px 30px;
+}
+
+p{
+    margin-top: 10px;
+}
+
+.aviso {
+    color: red;
+}
+
+footer {
+    background-color: rgb(141, 153, 163);
+    padding: 40px;
+}
