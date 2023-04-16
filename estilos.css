@@ -5,6 +5,16 @@
     font-family: sans-serif;
 }
 
+:root {
+    --white: #fcfcfc;
+    --black: #202020;
+    --gray: #606060;
+    --color-1: #fefee8;
+    --color-2: #f7d58b;
+    --color-3: #ee0a4e;
+    --color-4: #7e1c3d;
+}
+
 /* Estilo de la barra de scroll para que no sea la que viene por defecto con el navegador */
 ::-webkit-scrollbar {
     width: 15px;
@@ -23,32 +33,32 @@
   }
 
 body {
-    background-color: #e7edf1;
+    background-color: var(--color-1);
 }
 
 nav {
-    background-color: #429b7d;
-    padding: 5px;
+    background-color: var(--color-3);
+    padding: 10px 5px;
     display: flex;
     justify-content: center;
 }
 
 nav a {
     text-decoration: none;
-    color: #f9ffff;
+    color: var(--white);
 }
 
 header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #407090;
+    background-color: var(--color-4);
     text-align: center;
     height: 150px;
 }
 
 header h1 {
-    color: aliceblue;
+    color: var(--white);
 }
 
 section {
@@ -83,7 +93,8 @@ p{
 }
 
 footer {
-    background-color: rgb(141, 153, 163);
+    background-color: var(--gray);
+    color: var(--white);
     padding: 40px;
 }
 
