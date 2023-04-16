@@ -2,11 +2,40 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Estilo de la barra de scroll para que no sea la que viene por defecto con el navegador */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #303030;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #707070;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0;
+  }
+
+body {
+    background-color: #e7edf1;
 }
 
 nav {
-    background-color: aquamarine;
+    background-color: #429b7d;
     padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f9ffff;
 }
 
 header {
@@ -30,6 +59,25 @@ p{
     margin-top: 10px;
 }
 
+.cont-galeria {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    height: 70vh;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cont-galeria img {
+    border-bottom: 8px solid transparent;
+    scroll-snap-align: center;
+    display: flex;
+    height: 100%;
+    width: 90%;
+    object-fit: cover;
+}
+
 .aviso {
     color: red;
 }
@@ -37,4 +85,27 @@ p{
 footer {
     background-color: rgb(141, 153, 163);
     padding: 40px;
+}
+
+@media screen and (max-width: 700px) {
+    section {
+        padding: 50px 20px;
+    }
+    .cont-galeria {
+        width: 100%;
+        height: calc(100vw - 40px);
+    }
+    .cont-galeria img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    section {
+        padding: 50px 10px;
+    }
+    .cont-galeria {
+        width: 100%;
+        height: calc(100vw - 20px);
+    }
 }
