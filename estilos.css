@@ -74,8 +74,10 @@ p{
     gap: 10px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    height: 70vh;
-    max-width: 800px;
+    height: 120vw;
+    max-height: 400px;
+    width: 100%;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -102,10 +104,6 @@ footer {
     section {
         padding: 50px 20px;
     }
-    .cont-galeria {
-        width: 100%;
-        height: calc(100vw - 40px);
-    }
     .cont-galeria img {
         width: 100%;
     }
@@ -114,9 +112,5 @@ footer {
 @media screen and (max-width: 500px) {
     section {
         padding: 50px 10px;
-    }
-    .cont-galeria {
-        width: 100%;
-        height: calc(100vw - 20px);
     }
 }
