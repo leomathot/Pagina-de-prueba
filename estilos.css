@@ -9,10 +9,11 @@
     --white: #fcfcfc;
     --black: #202020;
     --gray: #606060;
-    --color-1: #fefee8;
-    --color-2: #f7d58b;
-    --color-3: #ee0a4e;
-    --color-4: #7e1c3d;
+
+    --color-1: #f5bded;
+    --color-2: #c8a4e0;
+    --color-3: #e075c0;
+    --color-4: #9970b4;
 }
 
 /* Estilo de la barra de scroll para que no sea la que viene por defecto con el navegador */
@@ -33,12 +34,14 @@
   }
 
 body {
-    background-color: var(--color-1);
+    background-color: var(--gray);
+    color: var(--white);
+    font-size: 1.1rem;
 }
 
 nav {
     background-color: var(--color-3);
-    padding: 10px 5px;
+    padding: 5px;
     display: flex;
     justify-content: center;
 }
@@ -46,6 +49,11 @@ nav {
 nav a {
     text-decoration: none;
     color: var(--white);
+    padding: 3px 6px;
+}
+
+nav a:hover {
+    background-color: var(--color-4);
 }
 
 header {
@@ -62,11 +70,35 @@ header h1 {
 }
 
 section {
-    padding: 50px 30px;
+    padding: 20px 30px;
+}
+
+article {
+    margin: 20px auto 20px auto;
+    width: 100%;
+    max-width: 700px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--color-2);
+    box-shadow: 0 0 5px 0 black;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 35px auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 20px;
+    color: var(--color-1);
 }
 
 p{
-    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p:last-child {
+    margin-bottom: 0;
 }
 
 .cont-galeria {
@@ -91,18 +123,21 @@ p{
 }
 
 .aviso {
+    background-color: var(--white);
+    padding: 10px;
     color: red;
 }
 
 footer {
-    background-color: var(--gray);
+    background-color: var(--black);
     color: var(--white);
-    padding: 40px;
+    font-size: 0.9rem;
+    padding: 60px 40px;
 }
 
 @media screen and (max-width: 700px) {
     section {
-        padding: 50px 20px;
+        padding: 20px 20px;
     }
     .cont-galeria img {
         width: 100%;
@@ -111,6 +146,6 @@ footer {
 
 @media screen and (max-width: 500px) {
     section {
-        padding: 50px 10px;
+        padding: 20px 10px;
     }
 }
