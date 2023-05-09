@@ -7,13 +7,13 @@
 
 :root {
     --white: #fcfcfc;
-    --black: #202020;
-    --gray: #606060;
+    --black: #28212c;
+    --gray: #49454c;
 
-    --color-1: #f5bded;
-    --color-2: #c8a4e0;
-    --color-3: #e075c0;
-    --color-4: #9970b4;
+    --color-1: #ff943c;
+    --color-2: #d57aff;
+    --color-3: #d65306;
+    --color-4: #413546;
 }
 
 /* Estilo de la barra de scroll para que no sea la que viene por defecto con el navegador */
@@ -39,8 +39,30 @@ body {
     font-size: 1.1rem;
 }
 
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        var(--color-3),
+        var(--black) 45%,
+        var(--black) 65%,
+        var(--color-4)
+    );
+    text-align: center;
+    height: 150px;
+}
+
+header h1 {
+    color: var(--white);
+}
+
 nav {
-    background-color: var(--color-3);
+    background: linear-gradient(
+        var(--black),
+        var(--color-4)
+    );
     padding: 5px;
     display: flex;
     justify-content: center;
@@ -48,25 +70,13 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: var(--white);
+    color: var(--color-2);
     padding: 3px 6px;
+    border-radius: 5px;
 }
 
 nav a:hover {
     background-color: var(--color-4);
-}
-
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-4);
-    text-align: center;
-    height: 150px;
-}
-
-header h1 {
-    color: var(--white);
 }
 
 section {
@@ -82,7 +92,7 @@ article {
 .card {
     background-color: rgba(0, 0, 0, 0.2);
     color: var(--color-2);
-    box-shadow: 0 0 5px 0 black;
+    box-shadow: 0 0 8px 0 black;
     padding: 10px;
     border-radius: 10px;
     margin: 35px auto;
@@ -125,7 +135,9 @@ p:last-child {
 .aviso {
     background-color: var(--white);
     padding: 10px;
+    border-radius: 6px;
     color: red;
+    margin: 25px 0;
 }
 
 footer {
